@@ -10,4 +10,6 @@ module.exports = app => {
   router.get('/admin', controller.admin.echo);
   router.get('/getData/getIndex', controller.getData.getIndex);
   router.resources('fruits', '/fruits', controller.fruits);
+
+  router.get('/jwt',controller.jwtToken.index);
 };

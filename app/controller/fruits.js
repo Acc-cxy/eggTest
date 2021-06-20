@@ -14,9 +14,13 @@ class fruits extends Controller {
   async create() {
     const { ctx } = this;
     const fruit = ctx.request.body.fruit;
-    console.log(fruit);
-    fruitsList.push(fruit);
-    ctx.body = '添加成功';
+    if (!fruit) {
+      ctx.body = '不能为空';
+    } else {
+      fruitsList.push(fruit);
+      ctx.body = '添加成功';
+    }
+
   }
 
   // delete请求

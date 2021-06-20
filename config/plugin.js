@@ -13,9 +13,20 @@ module.exports = {
     package: 'egg-view-nunjucks',
   },
 
+  jwt: {
+    // token
+    enable: true,
+    package: 'egg-jwt',
+  },
+
   cors: {
     // 跨域
     enable: true,
     package: 'egg-cors',
   },
+
+  sequelize: {
+    enable: true,
+    package: 'egg-sequelize',
+  }
 };

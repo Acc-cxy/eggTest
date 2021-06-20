@@ -42,6 +42,19 @@ module.exports = appInfo => {
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH,OPTIONS', // 被允许的请求方式
   };
 
+  config.jwt = {
+    secret: 'funToken',
+  };
+
+  config.sequelize = {
+    dialect : 'mysql',
+    database: 'eggtest',
+    host: 'localhost',
+    port: '3306',
+    username: 'root',
+    password: 'root',
+  }
+
   return {
     ...config,
     ...userConfig,
