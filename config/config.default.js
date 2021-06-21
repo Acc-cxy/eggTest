@@ -47,13 +47,13 @@ module.exports = appInfo => {
   };
 
   config.sequelize = {
-    dialect : 'mysql',
+    dialect: 'mysql',
     database: 'eggtest',
     host: 'localhost',
     port: '3306',
     username: 'root',
     password: 'root',
-  }
+  };
 
   return {
     ...config,
